@@ -1,5 +1,10 @@
-const tab =[2,3,4,1,3,45]
-for(let i=0;i<tab.length;i++){
-    console.log(tab[i])
+const tab = {
+    nom : 'cheikh',
+    prenom :'tidiane',
+    matiere : ['svt','math'],
+    afficher(){
+        console.log(this.nom)
+        console.log(this.matiere)
+    }
 }
-console.log(tab.sort())
+tab.afficher()
