@@ -1,11 +1,12 @@
 let user={
-  nom:"cheikh"
+  nom:"cheikh",
+  code:12
 }
-let a= {}
-a=user
-console.log(a.nom)
-console.log(user.nom)
-console.log("-----------")
-a.nom="papa"
-console.log(a.nom)
-console.log(user.nom)
+let clone={}
+
+for(key in user){
+  clone[key]=user[key]
+}
+
+clone.nom="papa"
+console.log(user.nom, clone.nom)
