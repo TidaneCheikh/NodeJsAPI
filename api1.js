@@ -1,13 +1,12 @@
-let user = { name: "John" };
+function makeUser() {
+  return {
+    name: "John",
+    ref() {
+      return this;
+    }
+  };
+}
 
-let permissions1 = { canView: true };
-let permissions2 = { canEdit: true };
+let user = makeUser();
 
-// copie toutes les propriétés de permissions1 et 2 dans user
-Object.assign(user, permissions1, permissions2);
-
-// now user = { name: "John", canView: true, canEdit: true }
-console.log(user.name); // John
-console.log(user.canView); 
-console.log(user)
-// true
+console.log( user.ref().name );
