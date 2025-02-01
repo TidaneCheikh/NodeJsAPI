@@ -1,12 +1,13 @@
-let user={
-  nom:"cheikh",
-  code:12
-}
-let clone={}
+let user = { name: "John" };
 
-for(key in user){
-  clone[key]=user[key]
-}
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };
 
-clone.nom="papa"
-console.log(user.nom, clone.nom)
+// copie toutes les propriétés de permissions1 et 2 dans user
+Object.assign(user, permissions1, permissions2);
+
+// now user = { name: "John", canView: true, canEdit: true }
+console.log(user.name); // John
+console.log(user.canView); 
+console.log(user)
+// true
