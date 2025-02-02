@@ -5,7 +5,7 @@ let user = {
   [id]: 123
 };
 
-for (let key in user) alert(key); // name, age (no symbols)
+for (let key in user) console.log("key :",key); // name, age (no symbols)
 
 // the direct access by the symbol works
 console.log( "Direct: " + user[id] );
