@@ -1,11 +1,19 @@
-// explicit conversion
-obj="1"
-let num = Number(obj);
+let user = {
+  name: "John",
+  money: 1000,
 
-// maths (except binary plus)
-let n = +obj; // unary plus
-//let delta = date1 - date2;
+  // for hint="string"
+  toString() {
+    return `{name: "${this.name}"}`;
+  },
 
-// less/greater comparison
-//let greater = user1 > user2;
-console.log(typeof(obj) ,"--" ,typeof(n) ,"--")
+  // for hint="number" or "default"
+  valueOf() {
+    return this.money;
+  }
+
+};
+
+alert(user); // toString -> {name: "John"}
+alert(+user); // valueOf -> 1000
+alert(user + 500); // valueOf -> 1500
