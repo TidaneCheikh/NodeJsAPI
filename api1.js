@@ -1,11 +1,11 @@
-let id = Symbol("id");
-let user = {
-  name: "John",
-  age: 30,
-  [id]: 123
-};
+// explicit conversion
+obj="1"
+let num = Number(obj);
 
-for (let key in user) console.log("key :",key); // name, age (no symbols)
+// maths (except binary plus)
+let n = +obj; // unary plus
+//let delta = date1 - date2;
 
-// the direct access by the symbol works
-console.log( "Direct: " + user[id] );
+// less/greater comparison
+//let greater = user1 > user2;
+console.log(typeof(obj) ,"--" ,typeof(n) ,"--")
