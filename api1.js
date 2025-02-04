@@ -1,19 +1,3 @@
-let user = {
-  name: "John",
-  money: 1000,
-
-  // for hint="string"
-  toString() {
-    return `{name: "${this.name}"}`;
-  },
-
-  // for hint="number" or "default"
-  valueOf() {
-    return this.money;
-  }
-
-};
-
-alert(user); // toString -> {name: "John"}
-alert(+user); // valueOf -> 1000
-alert(user + 500); // valueOf -> 1500
+console.log( "chercher".codePointAt(0) ); // 90
+console.log( "z".codePointAt(0) ); // 122
+console.log( "z".codePointAt(0).toString(16) );
