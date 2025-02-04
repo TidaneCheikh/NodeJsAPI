@@ -1,5 +1,4 @@
-chaine = "        chercher a plaire au gens    "
-console.log(chaine); 
-console.log("chaine".repeat(7));
-console.log( "z".codePointAt(0) ); // 122
-console.log( "z".codePointAt(0).toString(16) );
+let fruits = ["Apple", "Orange", "Plum"];
+console.log(fruits[1])
+
+console.log( fruits[fruits.length-1] ); 
