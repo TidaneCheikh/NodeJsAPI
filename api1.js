@@ -1,9 +1,7 @@
-let fruits = ["Banana"]
+let arr = [1, 2, 3, 4, 5];
 
-let arr = fruits; // copy by reference (two variables reference the same array)
+arr.length = 2; // truncate to 2 elements
+console.log( arr ); // [1, 2]
 
-console.log( arr === fruits ); // true
-
-arr.push("Pear"); // modify the array by reference
-
-console.log( fruits ); 
+arr.length = 5; // return length back
+console.log( arr);
