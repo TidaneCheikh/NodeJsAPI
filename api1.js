@@ -1,7 +1,14 @@
-let arr = [1, 2, 3, 4, 5];
+function multiplicationTable(size) {
+    let table = [];
+    for (let i = 1; i <= size; i++) {
+        let row = [];
+        for (let j = 1; j <= size; j++) {
+            row.push(i * j);
+        }
+        table.push(row);
+    }
+    return table;
+}
 
-arr.length = 2; // truncate to 2 elements
-console.log( arr ); // [1, 2]
-
-arr.length = 5; // return length back
-console.log( arr);
+// Exemple d'utilisation
+console.log(multiplicationTable(3));
