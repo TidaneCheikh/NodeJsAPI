@@ -22,16 +22,6 @@ const iterateArray = (array) => {
   }
 };
 
-// Exemple d'utilisation
-console.log(multiplicationTable(3));
-console.log(isLetterInArray('a', ['a', 'b', 'c'])); // true
-console.log(isLetterInArray('d', ['a', 'b', 'c'])); // false
-console.log(numberToBinary(10)); // "1010"
-console.log(sortArrayAscending([3, 1, 4, 1, 5, 9, 2, 6])); // [1, 1, 2, 3, 4, 5, 6, 9]
-console.log(isFloat(10.5)); // true
-console.log(isFloat(10)); // false
-iterateArray([3, 1, 4, 1, 5, 9, 2, 6]);
-
 
 function sumTwoSmallestNumbers(numbers) {  
   let array=numbers.slice().sort((a, b) => a - b);
@@ -50,3 +40,9 @@ function sumTwoSmallestNumbers(numbers) {
   }
   return somme
  }
+
+
+ 
+const findNextSquare = (sq) => {
+  return Number.isInteger(Math.sqrt(sq)) ? Math.pow(Math.sqrt(sq) + 1, 2) : -1;
+};
