@@ -46,3 +46,14 @@ function sumTwoSmallestNumbers(numbers) {
 const findNextSquare = (sq) => {
   return Number.isInteger(Math.sqrt(sq)) ? Math.pow(Math.sqrt(sq) + 1, 2) : -1;
 };
+
+function findEvenIndex(arr){
+  const sumArray = (array) => array.reduce((sum, num) => sum + num, 0);
+  for(let i=0;i<arr.length;i++){
+    if(sumArray(arr.slice(0,i))==sumArray(arr.slice(i+1,arr.length))){
+      return i
+    }
+  }
+  return -1
+  //Code goes here!
+}
