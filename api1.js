@@ -61,10 +61,10 @@ function findEvenIndex(arr){
 function findOdd(A) {
   const countOccurrences = (array, element) => array.filter((item) => item === element).length;
   //happy coding!
-   let findindex=1;
-   let tem=1;
+   let findindex=0;
+   let tem=0;
    for(let i=0;i<A.length;i++){
-     if(countOccurrences(A,i)%2==0 && countOccurrences(A,i)>tem){
+     if(countOccurrences(A,A[i])%2!=0 && countOccurrences(A,A[i])>tem){
         tem=countOccurrences(A,i)
         findindex=A[i]
      }
@@ -72,8 +72,6 @@ function findOdd(A) {
   }
   return findindex;
 }
-const countOccurrences = (array, element) => array.filter((item) => item === element).length;
-console.log(countOccurrences([20,1,-1,2,-2,3,3,5,5,1,2,4,20,1,1,1,1,4,-1,-2,5],1));
 
   //happy coding!
 
