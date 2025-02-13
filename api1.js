@@ -1,5 +1,7 @@
 function multiplicationTable(size) {
-  return [...Array(size)].map((_, i) => [...Array(size)].map((_, j) => (i + 1) * (j + 1)));
+  return [...Array(size)].map((_, i) =>
+    [...Array(size)].map((_, j) => (i + 1) * (j + 1))
+  );
 }
 
 function isLetterInArray(letter, array) {
@@ -18,61 +20,59 @@ const isFloat = (number) => typeof number === "number" && number % 1 !== 0;
 
 const iterateArray = (array) => {
   for (let i = 0; i < array.length; i++) {
-      console.log(array[i]);
+    console.log(array[i]);
   }
 };
 
-
-function sumTwoSmallestNumbers(numbers) {  
-  let array=numbers.slice().sort((a, b) => a - b);
-  somme=0
-  let count=0
+function sumTwoSmallestNumbers(numbers) {
+  let array = numbers.slice().sort((a, b) => a - b);
+  somme = 0;
+  let count = 0;
   const isFloat = (number) => typeof number === "number" && number % 1 !== 0;
-  for(let i=0; i<array.length ;i++){
-    if(!isFloat(array[i])){
-      somme+=array[i]
-      count+=1
+  for (let i = 0; i < array.length; i++) {
+    if (!isFloat(array[i])) {
+      somme += array[i];
+      count += 1;
       console.log(count);
     }
-    if(count==2){
-      break
+    if (count == 2) {
+      break;
     }
   }
-  return somme
- }
+  return somme;
+}
 
-
- 
 const findNextSquare = (sq) => {
   return Number.isInteger(Math.sqrt(sq)) ? Math.pow(Math.sqrt(sq) + 1, 2) : -1;
 };
 
-function findEvenIndex(arr){
+function findEvenIndex(arr) {
   const sumArray = (array) => array.reduce((sum, num) => sum + num, 0);
-  for(let i=0;i<arr.length;i++){
-    if(sumArray(arr.slice(0,i))==sumArray(arr.slice(i+1,arr.length))){
-      return i
+  for (let i = 0; i < arr.length; i++) {
+    if (sumArray(arr.slice(0, i)) == sumArray(arr.slice(i + 1, arr.length))) {
+      return i;
     }
   }
-  return -1
+  return -1;
   //Code goes here!
 }
 
 function findOdd(A) {
-  const countOccurrences = (array, element) => array.filter((item) => item === element).length;
+  const countOccurrences = (array, element) =>
+    array.filter((item) => item === element).length;
   //happy coding!
-   let findindex=0;
-   let tem=0;
-   for(let i=0;i<A.length;i++){
-     if(countOccurrences(A,A[i])%2!=0 && countOccurrences(A,A[i])>tem){
-        tem=countOccurrences(A,i)
-        findindex=A[i]
-     }
-    
+  let findindex = 0;
+  let tem = 0;
+  for (let i = 0; i < A.length; i++) {
+    if (countOccurrences(A, A[i]) % 2 != 0 && countOccurrences(A, A[i]) > tem) {
+      tem = countOccurrences(A, i);
+      findindex = A[i];
+    }
   }
   return findindex;
 }
-
-  //happy coding!
-
-//console.log(findOdd([1,2,1,1,2,2]));
+const findOutlier = (array) => {
+  const evens = array.filter(num => num % 2 === 0);
+  const odds = array.filter(num => num % 2 !== 0);
+  return evens.length === 1 ? evens[0] : odds[0];
+};
