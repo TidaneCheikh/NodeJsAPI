@@ -76,3 +76,8 @@ const findOutlier = (array) => {
   const odds = array.filter(num => num % 2 !== 0);
   return evens.length === 1 ? evens[0] : odds[0];
 };
+
+function findOutlier(ints) {
+  return ints.slice(0, 3).reduce((a, b) => b % 2 === 0? a : a + 1, 0) >= 2?
+    ints.find(i => i % 2 === 0) : ints.find(i => i % 2 !== 0);
+}
