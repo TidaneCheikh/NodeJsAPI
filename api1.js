@@ -77,7 +77,20 @@ const findOutlier = (array) => {
   return evens.length === 1 ? evens[0] : odds[0];
 };
 
-function findOutlier(ints) {
+/*function findOutlier(ints) {
   return ints.slice(0, 3).reduce((a, b) => b % 2 === 0? a : a + 1, 0) >= 2?
     ints.find(i => i % 2 === 0) : ints.find(i => i % 2 !== 0);
+}*/
+
+function arrayDiff(a, b) {
+  let arr2=[];
+  for(let i=0;i<a.length;i++){
+    if(!b.includes(a[i])){
+      arr2.push(a[i])
+    }
+  }
+  return arr2
+}
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
 }
