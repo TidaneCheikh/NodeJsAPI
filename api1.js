@@ -94,3 +94,12 @@ function arrayDiff(a, b) {
 function array_diff(a, b) {
   return a.filter(e => !b.includes(e));
 }
+function spinWords(string){
+  let arr=string.split(" ")
+  for(let i=0;i<arr.length;i++){
+    if(arr[i].length>=5){
+      arr.splice(i,1,arr[i].split('').reverse().join(''))
+    }
+  }
+  return arr.join(" ")
+}
