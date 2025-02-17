@@ -103,3 +103,15 @@ function spinWords(string){
   }
   return arr.join(" ")
 }
+
+
+function count(string) {
+  let arr={}
+  const countOccurrences = (array, element) =>
+    array.filter((item) => item === element).length
+  for (let i =0;i<string.length;i++){
+      arr[`${string[i]}`]=countOccurrences(string.split(""), string[i])
+  }
+  // TODO
+  return arr;
+}
