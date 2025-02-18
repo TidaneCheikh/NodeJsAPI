@@ -115,22 +115,8 @@ function count(string) {
   // TODO
   return arr;
 }
-
-
-
-
-function towerBuilder(nFloors) {
-  array =[]
-  array.push(Array(2).fill(`${Array(nFloors-1).join(' ') }*${Array(nFloors-1).join(' ') }`).join('') );
-  let j=2;
-  for (let i = 1; i < nFloors;i++ ) {
    // array.push(Array(i+j).fill('*').join('') );
-    array.push(Array(i+j).fill(`${Array(nFloors-i).fill(' ').join('') }*${Array(nFloors-i).fill(' ').join('') }`).join('') );
-    j=j+1
-  }
-  // build here
-  return array
-}
+
 function towerBuilders(nFloors) {
   let array = new Array(nFloors).fill(''); // Crée un tableau vide avec nFloors éléments
 
