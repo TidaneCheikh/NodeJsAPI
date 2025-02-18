@@ -127,11 +127,20 @@ function towerBuilder(nFloors) {
    // array.push(Array(i+j).fill('*').join('') );
     array.push(Array(i+j).fill(`${Array(nFloors-i).fill(' ').join('') }*${Array(nFloors-i).fill(' ').join('') }`).join('') );
     j=j+1
-
   }
   // build here
   return array
 }
+function towerBuilders(nFloors) {
+  let array = new Array(nFloors).fill(''); // Crée un tableau vide avec nFloors éléments
+
+  for (let i = 0; i < nFloors; i++) {
+    let stars = '*'.repeat(2 * i + 1); // Génère les étoiles (1, 3, 5, ...)
+    let spaces = ' '.repeat(nFloors - i - 1); // Ajoute les espaces à gauche et à droite
+    array[i] = spaces + stars + spaces; // Stocke la ligne complète dans le tableau
+  }
+
+  return array;
 
 console.log(towerBuilder(6));
 [
