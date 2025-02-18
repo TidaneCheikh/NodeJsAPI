@@ -116,6 +116,9 @@ function count(string) {
   return arr;
 }
    // array.push(Array(i+j).fill('*').join('') );
+   function towerBuilder(n) {
+    return [...Array(n)].map((_,i)=>" ".repeat(n-1-i)+"*".repeat(i*2+1)+" ".repeat(n-1-i))
+  }
 
 function towerBuilders(nFloors) {
   let array = new Array(nFloors).fill(''); // Crée un tableau vide avec nFloors éléments
@@ -127,7 +130,7 @@ function towerBuilders(nFloors) {
   }
 
   return array;
-
+}
 console.log(towerBuilder(6));
 [
   "     *     ", 
