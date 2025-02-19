@@ -131,12 +131,19 @@ function towerBuilders(nFloors) {
 
   return array;
 }
-console.log(towerBuilder(6));
-[
-  "     *     ", 
-  "    ***    ", 
-  "   *****   ", 
-  "  *******  ", 
-  " ********* ", 
-  "***********"
-]
+
+function buyUpgrade(index) {
+  if (score >= upgrades[index].cost) {
+    score -= upgrades[index].cost;
+    clickPower += upgrades[index].power;
+    upgrades[index].cost *= 2; // Augmente le prix après achat
+    updateScore();
+    displayUpgrades();
+  } else {
+    alert("Pas assez de points !");
+  }
+}
+
+// Initialisation du jeu
+updateScore();
+displayUpgrades();
