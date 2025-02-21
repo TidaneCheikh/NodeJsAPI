@@ -134,3 +134,8 @@ function towerBuilders(nFloors) {
 ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
   console.log(`${item} is at index ${index} in ${array}`);
 });
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
+console.log("Nombre aléatoire :", getRandomNumber());
