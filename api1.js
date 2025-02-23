@@ -139,16 +139,8 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
 }
 
-console.log("Nombre aléatoire :", getRandomNumber());
-et users = [
-  {id: 1, name: "John"},
-  {id: 2, name: "Pete"},
-  {id: 3, name: "Mary"},
-  {id: 4, name: "John"}
-];
+console.log("Nombre aléatoire :", getRandomNumber()); 
 
-// Find the index of the first John
-alert(users.findIndex(user => user.name == 'John')); // 0
-
-// Find the index of the last John
-alert(users.findLastIndex(user => user.name == 'John')); // 3
+setTimeout(function() {
+  console.log("Hello, world!");
+}, 3000);
