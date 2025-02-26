@@ -139,6 +139,25 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
 }
 
-["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
-  console.log(`${item} is at index ${index} in ${array}`);
-});
+function selectionSort(arr) {
+  let n = arr.length;
+  
+  for (let i = 0; i < n - 1; i++) {
+      let minIndex = i;
+
+      for (let j = i + 1; j < n; j++) {
+          if (arr[j] < arr[minIndex]) {
+              minIndex = j;
+          }
+      }
+
+      // Échanger les éléments
+      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+  }
+
+  return arr;
+}
+
+// Exemple d'utilisation
+let numbers = [64, 25, 12, 22, 11];
+console.log(selectionSort(numbers)); // [11, 12, 22, 25, 64]
